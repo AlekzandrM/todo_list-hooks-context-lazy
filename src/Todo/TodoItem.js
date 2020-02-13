@@ -13,6 +13,7 @@ function TodoItem({ todo, index, onChange }) {
       <span className={classes.join("")}>
         <input
           type="checkbox"
+          checked={todo.completed}
           style={{ marginRight: "1rem" }}
           onChange={() => onChange(todo.id)}
         />

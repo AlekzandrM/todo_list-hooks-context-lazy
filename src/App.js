@@ -5,7 +5,7 @@ import TodoList from "./Todo/TodoList";
 function App() {
   let [todos, setTodos] = React.useState([
     { id: 1, completed: false, title: "To buy bread" },
-    { id: 2, completed: false, title: "To buy milk" },
+    { id: 2, completed: true, title: "To buy milk" },
     { id: 3, completed: false, title: "To buy butter" }
   ]);
 
