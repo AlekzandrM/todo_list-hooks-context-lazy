@@ -14,3 +14,7 @@
     color: white;
     border: none;
 }
+
+.done {
+    text-decoration: line-through;
+}

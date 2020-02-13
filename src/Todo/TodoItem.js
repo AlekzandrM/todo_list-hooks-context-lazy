@@ -3,9 +3,14 @@ import PropTypes from "prop-types";
 import "./todo.css";
 
 function TodoItem({ todo, index, onChange }) {
+  const classes = [];
+  if (todo.completed) {
+    classes.push("done");
+  }
+
   return (
     <li className="li">
-      <span>
+      <span className={classes.join("")}>
         <input
           type="checkbox"
           style={{ marginRight: "1rem" }}
