@@ -9,11 +9,12 @@ const styles = {
   }
 };
 
-function TodoList() {
+function TodoList(props) {
   return (
     <ul style={styles.ul}>
-      <TodoItem />
-      <TodoItem />
+      {props.todos.map((todo, index) => (
+        <TodoItem todo={todo} key={todo.id} index={index} />
+      ))}
     </ul>
   );
 }
