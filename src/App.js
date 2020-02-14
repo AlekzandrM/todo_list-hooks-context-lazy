@@ -29,7 +29,12 @@ function App() {
     <Context.Provider value={{ removeTodo }}>
       <div className="wrapper">
         <h1>Todo List</h1>
-        <TodoList todos={todos} onToggle={handleToggle} />
+
+        {todos.length ? (
+          <TodoList todos={todos} onToggle={handleToggle} />
+        ) : (
+          <p>No todos! </p>
+        )}
       </div>
     </Context.Provider>
   );
